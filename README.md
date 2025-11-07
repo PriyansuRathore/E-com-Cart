@@ -186,6 +186,12 @@ The application demonstrates a complete e-commerce flow:
 
 ## 👨‍💻 Developer
 
+**Priyansu Rathore**
+- Full Stack Developer
+- GitHub: [@PriyansuRathore](https://github.com/PriyansuRathore)
+- Skills: React, Node.js, Express, JavaScript, SQLite, REST APIs
+- Focus: Modern web development with responsive UI/UX design
+
 Built with ❤️ for Vibe Commerce internship screening.
 
 ---

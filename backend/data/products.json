@@ -1,0 +1,9 @@
+[
+  {"id":"p1","name":"Vibe T-Shirt","price":399.00,"description":"Comfort cotton tee"},
+  {"id":"p2","name":"Vibe Hoodie","price":1299.00,"description":"Warm hoodie"},
+  {"id":"p3","name":"Vibe Cap","price":299.00,"description":"Adjustable cap"},
+  {"id":"p4","name":"Vibe Sneakers","price":2499.00,"description":"Casual sneakers"},
+  {"id":"p5","name":"Vibe Mug","price":199.00,"description":"Ceramic mug"},
+  {"id":"p6","name":"Vibe Backpack","price":1999.00,"description":"Daily backpack"},
+  {"id":"p7","name":"Vibe Socks (Pack)","price":249.00,"description":"3-pair socks"}
+]

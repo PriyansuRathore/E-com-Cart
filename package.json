@@ -1,0 +1,16 @@
+{
+  "name": "vibe-commerce-cart",
+  "version": "1.0.0",
+  "description": "Full-stack e-commerce cart application for Vibe Commerce internship",
+  "scripts": {
+    "install-all": "cd backend && npm install && cd ../frontend && npm install",
+    "dev": "concurrently \"cd backend && npm start\" \"cd frontend && npm run dev\"",
+    "start": "cd backend && npm start"
+  },
+  "keywords": ["ecommerce", "cart", "react", "nodejs", "express", "sqlite"],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^7.6.0"
+  }
+}

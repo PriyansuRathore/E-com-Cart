@@ -1,29 +1,34 @@
-# Vibe Commerce - Mock E-Commerce Cart
+# VibeCart - Full-Stack E-Commerce Platform
 
-A full-stack shopping cart application built for Vibe Commerce internship screening. Features a modern React frontend with a Node.js/Express backend and SQLite database.
+A modern e-commerce platform featuring user authentication, product management, and a sleek dark theme UI. Built with React, Node.js, Express, and SQLite.
 
 ## 🚀 Features
 
-- **Product Catalog**: Browse 10 mock products with images and prices
+- **User Authentication**: JWT-based login/register with password reset
+- **Product Management**: CRUD operations with category filtering and search
 - **Shopping Cart**: Add/remove items, update quantities, view totals
-- **Checkout Process**: Customer form with mock payment processing
-- **Receipt Generation**: Professional receipt modal with order details
-- **Responsive Design**: Modern glass morphism UI with smooth animations
-- **Database Persistence**: SQLite database for cart and order storage
+- **Checkout Process**: Authenticated checkout with order processing
+- **User Dashboard**: Profile management and cart summary
+- **Dark Theme UI**: Modern glass morphism design with neon accents
+- **Database Persistence**: SQLite database for users, products, and orders
+- **Responsive Design**: Mobile-first approach with smooth animations
 
 ## 🛠 Tech Stack
 
 **Frontend:**
-- React 18
+- React 18 with Hooks
 - React Router DOM
-- Modern CSS with Glass Morphism
+- Context API for state management
+- Modern CSS with Dark Theme
 - Vite (Build tool)
 
 **Backend:**
-- Node.js
-- Express.js
-- SQLite3
+- Node.js & Express.js
+- JWT Authentication
+- bcryptjs for password hashing
+- SQLite3 database
 - CORS enabled
+- RESTful API design
 
 ## 📁 Project Structure
 
@@ -32,20 +37,29 @@ e com cart/
 ├── backend/
 │   ├── data/
 │   │   └── products.json
-│   ├── db/
-│   │   └── init.sql
+│   ├── middleware/
+│   │   └── auth.js
 │   ├── server.js
 │   ├── ecom.db
+│   ├── reset-db.js
 │   └── package.json
 ├── frontend/
 │   ├── src/
 │   │   ├── components/
-│   │   │   ├── Cart.jsx
+│   │   │   ├── Navbar.jsx
+│   │   │   ├── Hero.jsx
+│   │   │   ├── CategoryShowcase.jsx
+│   │   │   ├── SearchFilters.jsx
+│   │   │   ├── Products.jsx
 │   │   │   ├── CheckoutModal.jsx
-│   │   │   └── Products.jsx
+│   │   │   └── Footer.jsx
 │   │   ├── pages/
 │   │   │   ├── HomePage.jsx
-│   │   │   └── CartPage.jsx
+│   │   │   ├── CartPage.jsx
+│   │   │   ├── LoginPage.jsx
+│   │   │   └── DashboardPage.jsx
+│   │   ├── context/
+│   │   │   └── AuthContext.jsx
 │   │   ├── api.js
 │   │   ├── App.jsx
 │   │   ├── main.jsx
@@ -76,7 +90,7 @@ e com cart/
    ```bash
    npm start
    ```
-   Server runs on http://localhost:3001
+   Server runs on http://localhost:4000
 
 ### Frontend Setup
 1. Navigate to frontend directory:
@@ -97,74 +111,101 @@ e com cart/
 
 ## 🌐 API Endpoints
 
+### Authentication
 | Method | Endpoint | Description |
 |--------|----------|-------------|
-| GET | `/api/products` | Fetch all products |
+| POST | `/api/register` | User registration |
+| POST | `/api/login` | User login |
+| GET | `/api/profile` | Get user profile (protected) |
+
+### Products
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | `/api/products` | Fetch all products with filters |
+| GET | `/api/products/:id` | Get single product |
+| POST | `/api/products` | Add new product |
+| PUT | `/api/products/:id` | Update product |
+| DELETE | `/api/products/:id` | Delete product |
+
+### Cart & Orders
+| Method | Endpoint | Description |
+|--------|----------|-------------|
 | GET | `/api/cart` | Get cart items and total |
 | POST | `/api/cart` | Add item to cart |
 | PUT | `/api/cart/:id` | Update cart item quantity |
 | DELETE | `/api/cart/:id` | Remove item from cart |
-| POST | `/api/checkout` | Process checkout and generate receipt |
+| POST | `/api/checkout` | Process checkout (protected) |
 
 ## ✨ Key Features Implemented
 
-### ✅ Backend Requirements
-- [x] GET /api/products - Returns 10 mock products
-- [x] POST /api/cart - Add items with productId and quantity
-- [x] DELETE /api/cart/:id - Remove cart items
-- [x] GET /api/cart - Retrieve cart with calculated total
-- [x] POST /api/checkout - Generate mock receipt with timestamp
+### ✅ Authentication System
+- [x] JWT-based user registration and login
+- [x] Password hashing with bcryptjs
+- [x] Protected routes and middleware
+- [x] Forgot password functionality
+- [x] User session management
 
-### ✅ Frontend Requirements
-- [x] Products grid with "Add to Cart" functionality
-- [x] Cart view with items, quantities, and totals
-- [x] Remove and update quantity buttons
-- [x] Checkout form with name and email validation
-- [x] Receipt modal displaying order details
-- [x] Fully responsive design
+### ✅ Product Management
+- [x] Full CRUD operations for products
+- [x] Category-based filtering
+- [x] Search functionality with multiple filters
+- [x] Price range filtering and sorting
+- [x] Product stock and rating system
 
-### ✅ Bonus Features
-- [x] SQLite database persistence
-- [x] Comprehensive error handling
-- [x] Modern UI with animations and glass morphism
-- [x] React Router for navigation
-- [x] Professional receipt design
-- [x] Loading states and user feedback
+### ✅ Shopping Experience
+- [x] Dynamic product catalog with categories
+- [x] Shopping cart with quantity management
+- [x] Authenticated checkout process
+- [x] Order receipt generation
+- [x] User dashboard with profile and cart summary
+
+### ✅ UI/UX Features
+- [x] Dark theme with glass morphism effects
+- [x] Responsive mobile-first design
+- [x] Smooth animations and transitions
+- [x] Loading states and error handling
+- [x] Professional navigation and footer
+- [x] Category showcase with horizontal scrolling
 
 ## 🎨 Design Highlights
 
-- **Glass Morphism UI**: Semi-transparent elements with backdrop blur
-- **Gradient Backgrounds**: Purple to blue gradient theme
-- **Smooth Animations**: Hover effects and transitions
-- **Professional Typography**: Modern font stack with gradient text
-- **Responsive Layout**: Works on desktop and mobile devices
-- **Interactive Elements**: Button hover effects and form validation
+- **Dark Theme**: Modern dark aesthetic with neon accent colors
+- **Glass Morphism**: Semi-transparent cards with backdrop blur effects
+- **Gradient Elements**: Colorful gradients for buttons and text
+- **Responsive Design**: Mobile-first approach with adaptive layouts
+- **Smooth Animations**: Hover effects, transitions, and loading states
+- **Professional Typography**: Clean fonts with proper hierarchy
+- **Interactive Elements**: Glowing buttons and form validation feedback
 
 ## 🚀 Demo & Usage
 
 The application demonstrates a complete e-commerce flow:
-1. **Browse Products**: View 10 mock products on the home page with modern card design
-2. **Add to Cart**: Click "Add to Cart" buttons to add items (cart counter updates in header)
-3. **View Cart**: Navigate to dedicated cart page via "View Cart" button
-4. **Manage Items**: Update quantities with +/- buttons or remove items entirely
-5. **Checkout**: Click "Proceed to Checkout" to open the checkout modal
-6. **Complete Order**: Fill in name and email, submit to receive order confirmation
-7. **Receipt**: View detailed receipt with order ID, timestamp, and itemized total
+1. **Register/Login**: Create account or sign in to access full features
+2. **Browse Products**: View categorized products with search and filters
+3. **Add to Cart**: Click "Add to Cart" buttons (cart counter updates in navbar)
+4. **Manage Cart**: View dedicated cart page with quantity controls
+5. **Authenticated Checkout**: Login required to proceed with checkout
+6. **User Dashboard**: Access profile information and cart summary
+7. **Product Management**: Add, edit, or delete products via API endpoints
 
 ## 🌐 Live Demo
 
-1. Start both servers (backend on :3001, frontend on :5173)
+1. Start both servers (backend on :4000, frontend on :5173)
 2. Open http://localhost:5173 in your browser
-3. Test the complete shopping flow from product selection to checkout
+3. Register a new account or login with existing credentials
+4. Test the complete shopping flow with authentication
+5. Use Postman to test API endpoints for product management
 
 ## 🔄 Future Enhancements
 
-- User authentication and profiles
-- Product search and filtering
-- Real payment gateway integration
-- Order history and tracking
+- Real payment gateway integration (Stripe/PayPal)
+- Order history and tracking system
 - Product reviews and ratings
-- Inventory management
+- Advanced inventory management
+- Email notifications for orders
+- Admin panel for user management
+- Real-time chat support
+- Wishlist functionality
 
 ## 👨‍💻 Developer
 
@@ -174,7 +215,7 @@ The application demonstrates a complete e-commerce flow:
 - Skills: React, Node.js, Express, JavaScript, SQLite, REST APIs
 - Focus: Modern web development with responsive UI/UX design
 
-Built with ❤️ for Vibe Commerce internship screening.
+Built with ❤️ showcasing modern full-stack development skills.
 
 ---
 

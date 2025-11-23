@@ -1,9 +1,14 @@
 [
-  {"id":"p1","name":"Vibe T-Shirt","price":399.00,"description":"Comfort cotton tee"},
-  {"id":"p2","name":"Vibe Hoodie","price":1299.00,"description":"Warm hoodie"},
-  {"id":"p3","name":"Vibe Cap","price":299.00,"description":"Adjustable cap"},
-  {"id":"p4","name":"Vibe Sneakers","price":2499.00,"description":"Casual sneakers"},
-  {"id":"p5","name":"Vibe Mug","price":199.00,"description":"Ceramic mug"},
-  {"id":"p6","name":"Vibe Backpack","price":1999.00,"description":"Daily backpack"},
-  {"id":"p7","name":"Vibe Socks (Pack)","price":249.00,"description":"3-pair socks"}
+  {"id":"p1", "name":"Wireless Headphones", "price":2999, "description":"High-quality wireless headphones with noise cancellation", "category":"electronics", "image":"https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=300", "stock":50, "rating":4.5},
+  {"id":"p2", "name":"Smartphone", "price":15999, "description":"Latest Android smartphone with 128GB storage", "category":"electronics", "image":"https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=300", "stock":30, "rating":4.7},
+  {"id":"p3", "name":"Laptop", "price":45999, "description":"14-inch laptop with 8GB RAM and SSD", "category":"electronics", "image":"https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=300", "stock":20, "rating":4.6},
+  {"id":"p4", "name":"Coffee Mug", "price":299, "description":"Ceramic coffee mug with custom design", "category":"home", "image":"https://images.unsplash.com/photo-1514228742587-6b1558fcf93a?w=300", "stock":100, "rating":4.2},
+  {"id":"p5", "name":"Backpack", "price":1299, "description":"Durable travel backpack with multiple compartments", "category":"fashion", "image":"https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=300", "stock":75, "rating":4.4},
+  {"id":"p6", "name":"Desk Lamp", "price":899, "description":"LED desk lamp with adjustable brightness", "category":"home", "image":"https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300", "stock":60, "rating":4.3},
+  {"id":"p7", "name":"Water Bottle", "price":499, "description":"Stainless steel water bottle 500ml", "category":"home", "image":"https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=300", "stock":120, "rating":4.1},
+  {"id":"p8", "name":"Bluetooth Speaker", "price":1999, "description":"Portable Bluetooth speaker with bass boost", "category":"electronics", "image":"https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=300", "stock":40, "rating":4.5},
+  {"id":"p9", "name":"Fitness Tracker", "price":3499, "description":"Smart fitness tracker with heart rate monitor", "category":"electronics", "image":"https://images.unsplash.com/photo-1575311373937-040b8e1fd5b6?w=300", "stock":35, "rating":4.4},
+  {"id":"p10", "name":"Wireless Mouse", "price":799, "description":"Ergonomic wireless mouse with precision tracking", "category":"electronics", "image":"https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=300", "stock":80, "rating":4.2},
+  {"id":"p11", "name":"T-Shirt", "price":599, "description":"Cotton casual t-shirt available in multiple colors", "category":"fashion", "image":"https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=300", "stock":200, "rating":4.0},
+  {"id":"p12", "name":"Programming Book", "price":899, "description":"Learn JavaScript - Complete guide for beginners", "category":"books", "image":"https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=300", "stock":50, "rating":4.8}
 ]

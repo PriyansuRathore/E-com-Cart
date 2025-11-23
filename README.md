@@ -106,24 +106,6 @@ e com cart/
 | DELETE | `/api/cart/:id` | Remove item from cart |
 | POST | `/api/checkout` | Process checkout and generate receipt |
 
-## 📱 Screenshots
-
-### Home Page - Products Grid
-![Products Grid](screenshots/home-page.png)
-*Modern product catalog with glass morphism design featuring 10 mock products*
-
-### Cart Page
-![Cart Page](screenshots/cart-page.png)
-*Dedicated cart page with full item management capabilities*
-
-### Checkout Modal
-![Checkout Form](screenshots/checkout-modal.png)
-*Professional checkout form with name and email validation*
-
-### Receipt Modal
-![Receipt](screenshots/receipt-modal.png)
-*Detailed receipt confirmation with order details and totals*
-
 ## ✨ Key Features Implemented
 
 ### ✅ Backend Requirements
